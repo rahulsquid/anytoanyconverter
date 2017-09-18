@@ -1,0 +1,11 @@
+.idea
+/web-app/target
+/web-app/web-app.iml
+/web-app/.classpath
+/web-app/.settings
+/web-app/.project
+fileconverter.iml
+.project
+.settings
+.classpath
+.DS_Store
