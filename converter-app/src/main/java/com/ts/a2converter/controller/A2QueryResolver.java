@@ -8,9 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
 public class A2QueryResolver implements GraphQLQueryResolver {
+
     @Autowired
     @Qualifier("converterService")
     private ConverterService<QueryDetails> service;
+
     public QueryDetails convert(QueryDetails id) {
         return service.convert(id);
     }

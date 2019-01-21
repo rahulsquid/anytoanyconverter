@@ -9,9 +9,13 @@
         <module>converter-app</module>
         <module>converter-core</module>
     </modules>
-    <packaging>pom</packaging>
+
+  <packaging>pom</packaging>
+
 
   <properties>
+    <java.version>1.8</java.version>
+
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <jdk.version>1.8</jdk.version>
@@ -20,10 +24,14 @@
     <junit.version>4.11</junit.version>
     <logback.version>1.0.13</logback.version>
     <jcl-over-slf4j.version>1.7.5</jcl-over-slf4j.version>
+    <spring-boot-starter-web.version>2.0.2.RELEASE</spring-boot-starter-web.version>
   </properties>
+
 
   <dependencyManagement>
     <dependencies>
+
+
       <dependency>
         <groupId>com.ts.fileconverter</groupId>
         <artifactId>coverter-core</artifactId>
@@ -44,17 +52,18 @@
       </dependency>
 
     <!-- Spring Core -->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-core</artifactId>
-      <version>${spring.version}</version>
-      <exclusions>
-        <exclusion>
-          <groupId>commons-logging</groupId>
-          <artifactId>commons-logging</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
+
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <version>${spring-boot-starter-web.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-log4j2</artifactId>
+        <version>${spring-boot-starter-web.version}</version>
+      </dependency>
 
     <dependency>
       <groupId>org.slf4j</groupId>

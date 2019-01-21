@@ -1,3 +1,5 @@
+scalar Date
+
 type QueryDetails {
     id: ID!
     data: String!
@@ -8,6 +10,7 @@ type QueryDetails {
 type User {
     id: ID!
     name: String!
+    dob: Date!
 }
 
 # The Root Query for the application
@@ -17,5 +20,5 @@ type Query {
 
 # The Root Mutation for the application to register User
 type Mutation {
-    register(user: User!) : User!
+    register(title String!, name: String!, dob String) : User!
 }
