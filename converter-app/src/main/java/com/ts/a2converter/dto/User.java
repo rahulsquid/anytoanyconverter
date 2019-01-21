@@ -6,5 +6,4 @@ package com.ts.a2converter.dto;
 public class User {
     String id;
     String name;
-    String[] groups;
 }

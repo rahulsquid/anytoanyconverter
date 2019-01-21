@@ -1,0 +1,21 @@
+type QueryDetails {
+    id: ID!
+    data: String!
+    ts: Long
+    user: User!
+}
+
+type User {
+    id: ID!
+    name: String!
+}
+
+# The Root Query for the application
+type Query {
+    convert(payload: QueryDetails): [QueryDetails]!
+}
+
+# The Root Mutation for the application to register User
+type Mutation {
+    register(user: User!) : User!
+}
